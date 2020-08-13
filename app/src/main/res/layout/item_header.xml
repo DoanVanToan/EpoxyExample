@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="item"
+            type="com.example.epoxyexample.HeaderItem" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/padding_2"
+        android:paddingTop="@dimen/padding_1"
+        android:paddingEnd="@dimen/padding_2"
+        android:paddingBottom="@dimen/padding_1">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@{item.title}"
+            android:textColor="@color/black"
+            android:textSize="17dp"
+            android:textStyle="bold"
+            tools:text="This is header" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{item.subTitle}"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:textStyle="italic"
+            android:visibility="@{item.hasSubTitle()? View.VISIBLE: View.GONE}"
+            tools:text="Subtitle" />
+
+    </LinearLayout>
+
+</layout>

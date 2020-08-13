@@ -2,6 +2,7 @@ package com.example.epoxyexample
 
 import androidx.annotation.ColorRes
 import androidx.annotation.DimenRes
+import com.airbnb.epoxy.DataBindingEpoxyModel
 
 /**
  * Created by toandv6 on 13/08/2020.
@@ -10,7 +11,7 @@ import androidx.annotation.DimenRes
 
 data class DividerItem(
     @ColorRes
-    var backgroundColor: Int,
+    var backgroundColor: Int = R.color.gray_500,
     @DimenRes
     var height: Int = R.dimen.divider_normal,
     @DimenRes
@@ -21,4 +22,8 @@ data class DividerItem(
     var marginBottom: Int = R.dimen.margin_0,
     @DimenRes
     var marginTop: Int = R.dimen.margin_0
-) : Item
+) : EpoxyRender {
+    override fun generateModel(): DataBindingEpoxyModel {
+        return DividerBindingModel_().item(this@DividerItem)
+    }
+}

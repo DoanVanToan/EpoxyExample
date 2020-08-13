@@ -7,6 +7,10 @@
         <import type="android.view.View" />
 
         <variable
+            name="onDividerClickListener"
+            type="com.example.epoxyexample.OnDividerClickListener" />
+
+        <variable
             name="item"
             type="com.example.epoxyexample.DividerItem" />
     </data>
@@ -16,6 +20,7 @@
         android:layout_height="@dimen/divider_normal"
         android:layout_marginStart="@dimen/margin_2"
         android:layout_marginEnd="@dimen/margin_2"
+        android:onClick="@{()-> onDividerClickListener.onClick()}"
         bind:dividerItem="@{item}" />
 
 </layout>

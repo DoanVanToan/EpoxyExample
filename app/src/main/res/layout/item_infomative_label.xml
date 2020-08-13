@@ -7,6 +7,10 @@
         <import type="android.view.View" />
 
         <variable
+            name="onLabelClickListener"
+            type="com.example.epoxyexample.OnLabelClickListener" />
+
+        <variable
             name="item"
             type="com.example.epoxyexample.LabelItem" />
     </data>
@@ -14,6 +18,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="@{()-> onLabelClickListener.onClick(item)}"
         android:orientation="horizontal"
         android:paddingStart="@dimen/padding_2"
         android:paddingTop="@dimen/padding_1"

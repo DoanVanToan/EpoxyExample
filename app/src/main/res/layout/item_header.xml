@@ -7,6 +7,10 @@
         <import type="android.view.View" />
 
         <variable
+            name="onHeaderClickListener"
+            type="com.example.epoxyexample.OnHeaderClickListener" />
+
+        <variable
             name="item"
             type="com.example.epoxyexample.HeaderItem" />
     </data>
@@ -18,6 +22,7 @@
         android:paddingStart="@dimen/padding_2"
         android:paddingTop="@dimen/padding_1"
         android:paddingEnd="@dimen/padding_2"
+        android:onClick="@{(v)-> onHeaderClickListener.onClick(item)}"
         android:paddingBottom="@dimen/padding_1">
 
         <TextView

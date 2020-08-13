@@ -3,7 +3,10 @@ plugins {
     id 'kotlin-android'
 }
 
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
 
 kapt {
     correctErrorTypes = true
@@ -37,6 +40,9 @@ android {
         jvmTarget = '1.8'
     }
     dataBinding {
+        enabled = true
+    }
+    viewBinding {
         enabled = true
     }
 }

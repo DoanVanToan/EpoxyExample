@@ -34,7 +34,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{item.subTitle}"
-            android:textColor="@android:color/lighter_gray"
+            android:textColor="@android:color/darker_gray"
             android:textSize="14dp"
             android:textStyle="italic"
             android:visibility="@{item.hasSubTitle()? View.VISIBLE: View.GONE}"

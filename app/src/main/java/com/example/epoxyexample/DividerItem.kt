@@ -10,15 +10,15 @@ import androidx.annotation.DimenRes
 
 data class DividerItem(
     @ColorRes
-    val backgroundColor: Int,
+    var backgroundColor: Int,
     @DimenRes
-    val height: Int = R.dimen.divider_normal,
+    var height: Int = R.dimen.divider_normal,
     @DimenRes
-    val marginStart: Int = R.dimen.margin_2,
+    var marginStart: Int = R.dimen.margin_2,
     @DimenRes
-    val marginEnd: Int = R.dimen.margin_2,
+    var marginEnd: Int = R.dimen.margin_2,
     @DimenRes
-    val marginBottom: Int = R.dimen.margin_0,
+    var marginBottom: Int = R.dimen.margin_0,
     @DimenRes
-    val marginTop: Int = R.dimen.margin_0
-)
+    var marginTop: Int = R.dimen.margin_0
+) : Item

@@ -6,9 +6,9 @@ package com.example.epoxyexample
  */
 
 data class HeaderItem(
-    val title: String,
-    val subTitle: String? = null
-) {
+    var title: String,
+    var subTitle: String? = null
+): Item {
     fun hasSubTitle(): Boolean {
         return !subTitle.isNullOrEmpty()
     }

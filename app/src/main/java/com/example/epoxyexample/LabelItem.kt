@@ -6,10 +6,10 @@ package com.example.epoxyexample
  */
 
 data class LabelItem(
-    val title: String,
-    val subTitle: String? = null,
-    val description: CharSequence? = null
-) {
+    var title: String,
+    var subTitle: String? = null,
+    var description: CharSequence? = null
+) :Item {
     fun hasSubTitle(): Boolean {
         return !subTitle.isNullOrEmpty()
     }
